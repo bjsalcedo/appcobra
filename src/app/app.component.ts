@@ -140,7 +140,7 @@ export class MyApp {
   //Condicion que evalua si son componentes de las pestañas o de subpaginas
     if (childNav) {
       if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
-        console.log("ingreso a los tabs");
+    
 
         //retorna el color de los iconos de los tabs
         return 'secondary';
@@ -148,7 +148,7 @@ export class MyApp {
       return;
     }
     if (this.nav.getActive() && this.nav.getActive().component === page.component) {
-      console.log("ingreso a sub pagina");
+    
       return 'secondary';
     }
     return;

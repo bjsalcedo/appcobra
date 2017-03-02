@@ -1,0 +1,47 @@
+slidertab{
+
+  width:100%;
+
+	.header{
+		position:relative;
+	}
+
+	
+	#beisbol-icon,#futbol-icon{
+		background-image: url("http://www.mvpmods.com/uploads/profile/photo-94067.jpg");
+		background-size:cover;
+	    border: 1px solid #000;
+	    border-radius: 50%;
+	    display: block;
+	    height: 50px;
+	    line-height: 1;
+	    width: 50px;
+	}
+
+	#futbol-icon{
+		background-image: url("https://pbs.twimg.com/media/BiAU59nIYAEIWEF.jpg");
+	}
+
+	#arrow-slider{
+		width: 32px;
+		background-color: #E8F0F0;
+		position: fixed;
+		z-index: 2;
+		top: 0px;
+		height: 67px;
+		right:0;
+	}
+
+	#arrow-slider ion-icon{
+		
+		position: fixed;
+		z-index: 2;
+		top: 0px;
+		
+		right:0;
+	}
+
+	
+	
+
+}

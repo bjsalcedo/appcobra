@@ -24,6 +24,9 @@ import { ReferirPage } from '../pages/referir/referir';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
+import { SlideComponent } from '../components/slide/slide';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -41,6 +44,7 @@ import { UserData } from '../providers/user-data';
     PromocionesPage,
     LogoutPage,
     ReferirPage,
+    SlideComponent,
     TabsPage
   ],
   imports: [
@@ -63,6 +67,7 @@ import { UserData } from '../providers/user-data';
     PromocionesPage,
     LogoutPage,
     ReferirPage,
+    SlideComponent,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConferenceData, UserData, Storage]
