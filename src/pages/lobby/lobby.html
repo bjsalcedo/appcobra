@@ -8,7 +8,13 @@
   </ion-navbar>
 </ion-header>
 
+
+
+
+
 <ion-content no-padding>
+    
+
     <ion-slides>
       <ion-slide>
         <img src="https://dummyimage.com/1200x1000/8a8a8a/fff.png&text=Destacadas 1">
@@ -21,18 +27,17 @@
       </ion-slide>
     </ion-slides> 
 
-
   <ion-item>
 
 
 
       <ion-list item-block *ngFor="let d of diseases;let i=index">
 
-        <button no-padding text-left ion-button icon-left block [color]="d.color" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
-          <ion-col width-10>
-            <ion-icon item-left [name]="d.icon"></ion-icon>
+        <button no-padding ion-button icon-left block [color]="d.color" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+          <ion-col width-20>
+            <ion-icon [name]="d.icon"></ion-icon>
           </ion-col>
-          <ion-col width-90>
+          <ion-col width-80 text-left>
             {{d.title}}
           </ion-col>
         </button>
@@ -47,6 +52,9 @@
 
 
 
+
+</ion-content>
+
  <ion-footer >
         <div text-center>
           <button icon-left ion-button small text-center>
@@ -55,4 +63,3 @@
           </button>
         </div>
  </ion-footer>
-</ion-content>
