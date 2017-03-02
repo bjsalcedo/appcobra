@@ -1,0 +1,41 @@
+.ios, .md, .wp {
+    #sidenav .item, #sidenav {
+        background-color: color($colors, primary);
+        color: whitesmoke;
+        
+    }
+    .button{
+        border-radius: 0px;
+        font-size: 1.2rem;
+        height: 3.8em;
+    }
+    .list {
+        margin: -1px 0 8px 0;
+    }
+    .item-ios.item-block .item-inner {
+  
+        border-bottom: none;
+    }
+
+    ion-slides{
+        height: 100px;
+    }
+    .list .item-block .item-inner {
+        border-bottom: none;
+    }
+    .list > .item-block:first-child {
+        border-top: none;
+    }
+    .list > .item-block:last-child {
+        border-bottom: none;
+    }
+    .perfil-img{
+        width:80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: none;
+        border-bottom: none;
+    }
+}

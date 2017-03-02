@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Balance</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list *ngFor="let d of diseases; let i=index">
+	<ion-item  text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+		<h3>
+		{{d.title}}
+		<ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+		</h3>
+	</ion-item>
+	<ion-list *ngIf="isGroupShown(i)">
+		<ion-item submenu-item (click)="openPage()">Sub menu item</ion-item>
+		<ion-item submenu-item >Sub menu item</ion-item>
+		<ion-item submenu-item>Sub menu item</ion-item>
+	</ion-list>
+
+</ion-list> 
+
+
+</ion-content>

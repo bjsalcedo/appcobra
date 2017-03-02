@@ -1,0 +1,58 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lobby</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-slides>
+      <ion-slide>
+        <img src="https://dummyimage.com/1200x1000/8a8a8a/fff.png&text=Destacadas 1">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://dummyimage.com/1200x1000/3498db/fff.png&text=Destacadas 2">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://dummyimage.com/1200x1000/444444/fff.png&text=Destacadas 3">
+      </ion-slide>
+    </ion-slides> 
+
+
+  <ion-item>
+
+
+
+      <ion-list item-block *ngFor="let d of diseases;let i=index">
+
+        <button no-padding text-left ion-button icon-left block [color]="d.color" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+          <ion-col width-10>
+            <ion-icon item-left [name]="d.icon"></ion-icon>
+          </ion-col>
+          <ion-col width-90>
+            {{d.title}}
+          </ion-col>
+        </button>
+
+
+      </ion-list>
+
+
+
+  </ion-item>
+
+
+
+
+ <ion-footer >
+        <div text-center>
+          <button icon-left ion-button small text-center>
+              <ion-icon name="trophy"></ion-icon>
+              CREAR <BR>COMPETICION
+          </button>
+        </div>
+ </ion-footer>
+</ion-content>

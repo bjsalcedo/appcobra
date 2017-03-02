@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Registrarse</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="logo">
+		<img src="../../assets/img/Logo.png" alt="Ionic logo">
+	</div>
+
+	<form #signupForm="ngForm" novalidate class="contenedor">
+		<ion-list no-lines>
+			<ion-item>
+				<ion-label stacked color="secundary">Usuario</ion-label>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				El usuario es requerido
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="secundary">Contraseña</ion-label>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				La contraseña es requerida
+			</p>
+		</ion-list>
+
+		<div no-padding>
+			<button ion-button (click)="onSignup(signupForm)" color="secondary" type="submit" class="block-list" block>Aceptar</button>
+		</div>
+	</form>
+
+</ion-content>
